@@ -40,4 +40,27 @@ function displayWord() {
   }
 }
 
+// Keydown letter press
+window.addEventListener('keydown', e => {
+  if (e.key >= 'a' && e.key <= 'z') {
+    const letter = e.key;
+
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        correctLetters.push(letter);
+        displayWord();
+      } else {
+        showNotification()
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter)
+        updateWrongLettersEl();
+      } else {
+        showNotification();
+      }
+    }
+  }
+})
+
 displayWord();
