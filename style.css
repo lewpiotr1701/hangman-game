@@ -34,6 +34,17 @@ h1 {
   margin: auto;
 }
 
+.figure-container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
 .wrong-letters-container {
   position: absolute;
   right: 20px;
@@ -66,13 +77,41 @@ h1 {
   width: 20px
 }
 
-.figure-container {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 4px;
-  stroke-linecap: round;
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
-.figure-part {
-  display: none;
+.popup {
+  background-color: #2980b9;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+}
+
+.popup button {
+  cursor: pointer;
+  background-color: #fff;
+  color: #2980b9;
+  font-size: 16px;
+  border: 0;
+  margin-top: 20px;
+  padding: 12px 20px;
+}
+
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.popup button:focus {
+  outline: 0;
 }
