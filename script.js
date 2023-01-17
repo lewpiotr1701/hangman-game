@@ -13,6 +13,8 @@ let selectedWord = words[getRandomInt(words.length)];
 const correctLetters = [];
 const wrongLetters = [];
 
+let timeout = null;
+
 // Get random integer
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -38,6 +40,29 @@ function displayWord() {
     finalMessage.innerText = 'Congratulations! You won! 💪';
     popupContainer.style.display = 'flex'
   }
+}
+
+// Update the wrong letter
+function updateWrongLettersEl() {
+  wrongLettersEl.innerHTML = `
+  <p>Wrong</p>
+    ${wrongLetters.map(letter => `
+      <span>${letter}, </span>`
+  )
+      .join('')
+    }
+  `
+}
+
+// Show notification
+function showNotification() {
+  if (timeout) clearTimeout(timeout)
+
+  notificationContainer.classList.add('show')
+
+  timeout = setTimeout(() => {
+    notificationContainer.classList.remove('show')
+  }, 2000)
 }
 
 // Keydown letter press
