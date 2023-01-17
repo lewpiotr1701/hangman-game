@@ -11,6 +11,59 @@ html {
 body {
   background-color: #34495e;
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 80vh; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 20px 0 0;
+}
+
+.game-container {
+  padding: 20px 30px;
+  position: relative;
+  height: 350px;
+  width: 450px;
+  margin: auto;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-align: right;
+}
+
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+
+.wrong-letters-container span {
+  font-size: 24px;
+  color: lightcoral;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.letter {
+  border-bottom: 3px solid #2980b9;
+  font-size: 30px;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px
 }
 
 .figure-container {
