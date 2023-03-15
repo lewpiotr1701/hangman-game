@@ -1,6 +1,7 @@
 # Hangman Game
 
-Select a letter to figure out a hidden word in a set amount of chances.
+Simple hangman game. 
+Select a letter and try to figure out a hidden word in a set amount of chances.
 
 ## Project Specifications
 
